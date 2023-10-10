@@ -1,12 +1,12 @@
 Code for paper "Domain Adaptation for Conversational Query Production with the RAG Model Feedback" (EMNLP23 Findings)
 
-# Initialization: Supervised Training
-## Input Format
+## Initialization: Supervised Training
+### Input Format
 Prepare the train, valid, test file that end with '.json'. For each file, each line is a instance dict like:
 > {"dialogue": xxx, "query": yyy, "response": zzz}
 > {"dialogue": xxx, "query": yyy, "response": zzz}
 
-## Training and Testing
+### Training and Testing
 Run the training script 'Baseline/train_woi.sh' to train for WOI dataset and 'Baseline/train_dusinc.sh' to train for DUSINC dataset. Then, use evaluation script 'Baseline/eval.py' to get the automatic evaluation results.
 
 ## Stage 1: Data Preparation
