@@ -1,0 +1,32 @@
+data_dir = '../saved_data/DuConv'
+saved_dir = '../saved_data/t5-duconv-rag-mp-kd'
+
+class Arguments:
+    train_file = f'{data_dir}/train_rag_4_qp_mp.json'
+    valid_file = f'../saved_data/data_dusinc/dev.json'
+    support_file = f'{data_dir}/train_self-train_v2.json'
+    do_train = True
+    model_name_or_path = '../saved_data/mengzi-t5-base-dusinc'
+    max_source_length = 200
+    max_target_length = 50
+    learning_rate = 3e-5
+    epoches = 1
+    batch_size = 1
+    gradient_accumulation_steps = 256
+    report_steps = 50
+    saved_steps = 200
+    max_length = 64
+    num_beams = 4
+    topk = 10 # 10 for bm25
+    bm25 = False
+    threshold = 0.4 # 20. for bm25; 0.4 for rag;
+    gap = 0.2 # 5. for bm25; 0.4 for rag;
+    alpha = 0.1
+    support_batch_size = 50
+    do_support = True
+    add_prefix = True
+    lang = 'zh'
+    save_model = True
+    random_seed = True
+    output_dir = saved_dir
+    predictions = f'{saved_dir}/generated_predictions.txt'
